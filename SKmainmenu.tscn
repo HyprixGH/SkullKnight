@@ -1,0 +1,246 @@
+[gd_scene load_steps=24 format=3 uid="uid://dpxnbyedhe1qp"]
+
+[ext_resource type="Texture2D" uid="uid://bv75a6qwmmma5" path="res://main menu.png" id="1_ah80w"]
+[ext_resource type="Script" path="res://SKmainmenu.gd" id="1_m5eqy"]
+[ext_resource type="Texture2D" uid="uid://8u65baesiyy2" path="res://main menu compressed/image00009r.png" id="2_6lle7"]
+[ext_resource type="Texture2D" uid="uid://ov8n56dnhv46" path="res://main menu compressed/image00004r.png" id="3_jfj7x"]
+[ext_resource type="Script" path="res://menusi.gd" id="4_ee5jw"]
+[ext_resource type="Texture2D" uid="uid://besk3kxtpa4ba" path="res://main menu compressed/image00005r.png" id="4_ieucn"]
+[ext_resource type="Texture2D" uid="uid://ddu83jp6uj7b8" path="res://main menu compressed/image00012r.png" id="5_8sbsu"]
+[ext_resource type="Script" path="res://menumu.gd" id="6_fupin"]
+[ext_resource type="Texture2D" uid="uid://c201nvo2lomi8" path="res://main menu compressed/image00014r.png" id="6_hdvf7"]
+[ext_resource type="Texture2D" uid="uid://ciccufic6gbb7" path="res://main menu compressed/image00013r.png" id="7_e3c6w"]
+[ext_resource type="Script" path="res://menuse.gd" id="8_h630v"]
+[ext_resource type="Texture2D" uid="uid://bshdm73pe1fim" path="res://main menu compressed/image00008r.png" id="8_no115"]
+[ext_resource type="Script" path="res://menush.gd" id="10_sek8f"]
+[ext_resource type="Script" path="res://bmbuttons.gd" id="11_8y53k"]
+[ext_resource type="AudioStream" uid="uid://cswleun1oe0b5" path="res://audio/sfx/mixkit-modern-technology-select-3124_Audio Trimmer.wav" id="12_7nmkm"]
+[ext_resource type="AudioStream" uid="uid://bvrogmtr5vxae" path="res://audio/sfx/interface-1-126517.mp3" id="13_hdb3e"]
+[ext_resource type="Script" path="res://sigm1.gd" id="13_ugsu3"]
+[ext_resource type="Script" path="res://sigm2.gd" id="15_qehck"]
+
+[sub_resource type="Animation" id="Animation_gaov2"]
+resource_name = "mmbutton"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menusi:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03, 0.1),
+"transitions": PackedFloat32Array(1, 0.183011, 0.183011),
+"update": 0,
+"values": [Vector2(0.634, 0.634), Vector2(0.68, 0.68), Vector2(0.634, 0.634)]
+}
+
+[sub_resource type="Animation" id="Animation_1qk71"]
+resource_name = "mmbutton2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("menumu:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.03, 0.1),
+"transitions": PackedFloat32Array(1, 0.183011, 0.183011),
+"update": 0,
+"values": [Vector2(0.634, 0.634), Vector2(0.68, 0.68), Vector2(0.634, 0.634)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_j7cne"]
+_data = {
+"mmbutton1": SubResource("Animation_gaov2"),
+"mmbutton2": SubResource("Animation_1qk71")
+}
+
+[sub_resource type="Animation" id="Animation_b7gcq"]
+resource_name = "sigmbutton1"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sigm1:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.1),
+"transitions": PackedFloat32Array(1, 0.18301, 0.183011),
+"update": 0,
+"values": [Vector2(0.598, 0.598), Vector2(0.645, 0.645), Vector2(0.598, 0.598)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hc4st"]
+_data = {
+"sigmbutton1": SubResource("Animation_b7gcq")
+}
+
+[node name="SKmainmenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_m5eqy")
+
+[node name="basemenu" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.594, 0.594)
+texture = ExtResource("1_ah80w")
+
+[node name="menusi" type="Sprite2D" parent="."]
+position = Vector2(856.5, 344.5)
+scale = Vector2(0.634, 0.634)
+texture = ExtResource("2_6lle7")
+script = ExtResource("4_ee5jw")
+
+[node name="menumu" type="Sprite2D" parent="."]
+position = Vector2(1062.5, 546)
+scale = Vector2(0.634, 0.634)
+texture = ExtResource("3_jfj7x")
+script = ExtResource("6_fupin")
+
+[node name="menuse" type="Sprite2D" parent="."]
+position = Vector2(856, 748)
+scale = Vector2(0.634, 0.634)
+texture = ExtResource("4_ieucn")
+script = ExtResource("8_h630v")
+
+[node name="menush" type="Sprite2D" parent="."]
+position = Vector2(1064.5, 947.5)
+scale = Vector2(0.633, 0.633)
+texture = ExtResource("5_8sbsu")
+script = ExtResource("10_sek8f")
+
+[node name="bmbuttons" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 102.0
+offset_bottom = 69.0
+script = ExtResource("11_8y53k")
+
+[node name="sibutton" type="Button" parent="bmbuttons"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 230.0
+offset_right = 1321.0
+offset_bottom = 424.0
+
+[node name="mubutton" type="Button" parent="bmbuttons"]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 431.0
+offset_right = 1379.0
+offset_bottom = 625.0
+
+[node name="sebutton" type="Button" parent="bmbuttons"]
+layout_mode = 0
+offset_left = 540.0
+offset_top = 633.0
+offset_right = 1321.0
+offset_bottom = 827.0
+
+[node name="shbutton" type="Button" parent="bmbuttons"]
+layout_mode = 0
+offset_left = 598.0
+offset_top = 833.0
+offset_right = 1379.0
+offset_bottom = 1027.0
+
+[node name="buttonhl" type="AudioStreamPlayer" parent="bmbuttons"]
+stream = ExtResource("12_7nmkm")
+volume_db = -5.621
+bus = &"sfx"
+
+[node name="buttonpress" type="AudioStreamPlayer" parent="bmbuttons"]
+stream = ExtResource("13_hdb3e")
+volume_db = -8.432
+bus = &"sfx"
+
+[node name="sigm" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.594, 0.594)
+texture = ExtResource("6_hdvf7")
+
+[node name="sigm1" type="Sprite2D" parent="."]
+position = Vector2(539, 490)
+scale = Vector2(0.598, 0.598)
+texture = ExtResource("7_e3c6w")
+script = ExtResource("13_ugsu3")
+
+[node name="sigm2" type="Sprite2D" parent="."]
+position = Vector2(1392, 494)
+scale = Vector2(0.598, 0.598)
+texture = ExtResource("8_no115")
+script = ExtResource("15_qehck")
+
+[node name="sigmbuttons" type="Panel" parent="."]
+show_behind_parent = true
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="sigm1button" type="Button" parent="sigmbuttons"]
+layout_mode = 0
+offset_left = 370.0
+offset_top = 259.0
+offset_right = 706.0
+offset_bottom = 706.0
+
+[node name="sigm2button" type="Button" parent="sigmbuttons"]
+layout_mode = 0
+offset_left = 1195.0
+offset_top = 269.0
+offset_right = 1591.0
+offset_bottom = 716.0
+
+[node name="siback" type="Button" parent="sigmbuttons"]
+layout_mode = 0
+offset_left = 41.0
+offset_top = 986.0
+offset_right = 308.0
+offset_bottom = 1085.0
+
+[node name="mmbutton" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_j7cne")
+}
+
+[node name="sigmbutton" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hc4st")
+}
+
+[connection signal="mouse_entered" from="bmbuttons/sibutton" to="." method="_on_sibutton_mouse_entered"]
+[connection signal="mouse_entered" from="bmbuttons/sibutton" to="menusi" method="_on_sibutton_mouse_entered"]
+[connection signal="mouse_entered" from="bmbuttons/sibutton" to="bmbuttons" method="_on_sibutton_mouse_entered"]
+[connection signal="mouse_exited" from="bmbuttons/sibutton" to="menusi" method="_on_sibutton_mouse_exited"]
+[connection signal="pressed" from="bmbuttons/sibutton" to="." method="_on_sibutton_pressed"]
+[connection signal="pressed" from="bmbuttons/sibutton" to="bmbuttons" method="_on_sibutton_pressed"]
+[connection signal="mouse_entered" from="bmbuttons/mubutton" to="menumu" method="_on_mubutton_mouse_entered"]
+[connection signal="mouse_entered" from="bmbuttons/mubutton" to="bmbuttons" method="_on_mubutton_mouse_entered"]
+[connection signal="mouse_exited" from="bmbuttons/mubutton" to="menumu" method="_on_mubutton_mouse_exited"]
+[connection signal="pressed" from="bmbuttons/mubutton" to="." method="_on_mubutton_pressed"]
+[connection signal="pressed" from="bmbuttons/mubutton" to="bmbuttons" method="_on_mubutton_pressed"]
+[connection signal="mouse_entered" from="bmbuttons/sebutton" to="menuse" method="_on_sebutton_mouse_entered"]
+[connection signal="mouse_entered" from="bmbuttons/sebutton" to="bmbuttons" method="_on_sebutton_mouse_entered"]
+[connection signal="mouse_exited" from="bmbuttons/sebutton" to="menuse" method="_on_sebutton_mouse_exited"]
+[connection signal="pressed" from="bmbuttons/sebutton" to="bmbuttons" method="_on_sebutton_pressed"]
+[connection signal="mouse_entered" from="bmbuttons/shbutton" to="menush" method="_on_shbutton_mouse_entered"]
+[connection signal="mouse_entered" from="bmbuttons/shbutton" to="bmbuttons" method="_on_shbutton_mouse_entered"]
+[connection signal="mouse_exited" from="bmbuttons/shbutton" to="menush" method="_on_shbutton_mouse_exited"]
+[connection signal="pressed" from="bmbuttons/shbutton" to="bmbuttons" method="_on_shbutton_pressed"]
+[connection signal="finished" from="bmbuttons/buttonhl" to="bmbuttons" method="_on_buttonhl_finished"]
+[connection signal="finished" from="bmbuttons/buttonpress" to="bmbuttons" method="_on_buttonhl_finished"]
+[connection signal="mouse_entered" from="sigmbuttons/sigm1button" to="bmbuttons" method="_on_sigm_1_button_mouse_entered"]
+[connection signal="mouse_entered" from="sigmbuttons/sigm1button" to="sigm1" method="_on_sigm_1_button_mouse_entered"]
+[connection signal="mouse_exited" from="sigmbuttons/sigm1button" to="sigm1" method="_on_sigm_1_button_mouse_exited"]
+[connection signal="pressed" from="sigmbuttons/sigm1button" to="." method="_on_sigm_1_button_pressed"]
+[connection signal="pressed" from="sigmbuttons/sigm1button" to="bmbuttons" method="_on_sigm_1_button_pressed"]
+[connection signal="mouse_entered" from="sigmbuttons/sigm2button" to="bmbuttons" method="_on_sigm_2_button_mouse_entered"]
+[connection signal="mouse_entered" from="sigmbuttons/sigm2button" to="sigm2" method="_on_sigm_2_button_mouse_entered"]
+[connection signal="mouse_exited" from="sigmbuttons/sigm2button" to="sigm2" method="_on_sigm_2_button_mouse_exited"]
+[connection signal="pressed" from="sigmbuttons/sigm2button" to="bmbuttons" method="_on_sigm_2_button_pressed"]
+[connection signal="pressed" from="sigmbuttons/siback" to="." method="_on_siback_pressed"]
+[connection signal="pressed" from="sigmbuttons/siback" to="bmbuttons" method="_on_siback_pressed"]
