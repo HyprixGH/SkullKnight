@@ -1,23 +1,23 @@
-[gd_scene load_steps=24 format=3 uid="uid://dpxnbyedhe1qp"]
+[gd_scene load_steps=25 format=3 uid="uid://dpxnbyedhe1qp"]
 
 [ext_resource type="Texture2D" uid="uid://bv75a6qwmmma5" path="res://main menu.png" id="1_ah80w"]
 [ext_resource type="Script" path="res://SKmainmenu.gd" id="1_m5eqy"]
-[ext_resource type="Texture2D" uid="uid://8u65baesiyy2" path="res://main menu compressed/image00009r.png" id="2_6lle7"]
-[ext_resource type="Texture2D" uid="uid://ov8n56dnhv46" path="res://main menu compressed/image00004r.png" id="3_jfj7x"]
+[ext_resource type="Texture2D" uid="uid://8u65baesiyy2" path="res://art/main menu compressed/image00009r.png" id="3_y1gsq"]
 [ext_resource type="Script" path="res://menusi.gd" id="4_ee5jw"]
-[ext_resource type="Texture2D" uid="uid://besk3kxtpa4ba" path="res://main menu compressed/image00005r.png" id="4_ieucn"]
-[ext_resource type="Texture2D" uid="uid://ddu83jp6uj7b8" path="res://main menu compressed/image00012r.png" id="5_8sbsu"]
+[ext_resource type="Texture2D" uid="uid://ov8n56dnhv46" path="res://art/main menu compressed/image00004r.png" id="5_njcnr"]
 [ext_resource type="Script" path="res://menumu.gd" id="6_fupin"]
-[ext_resource type="Texture2D" uid="uid://c201nvo2lomi8" path="res://main menu compressed/image00014r.png" id="6_hdvf7"]
-[ext_resource type="Texture2D" uid="uid://ciccufic6gbb7" path="res://main menu compressed/image00013r.png" id="7_e3c6w"]
+[ext_resource type="Texture2D" uid="uid://besk3kxtpa4ba" path="res://art/main menu compressed/image00005r.png" id="7_uj3eq"]
 [ext_resource type="Script" path="res://menuse.gd" id="8_h630v"]
-[ext_resource type="Texture2D" uid="uid://bshdm73pe1fim" path="res://main menu compressed/image00008r.png" id="8_no115"]
+[ext_resource type="Texture2D" uid="uid://ddu83jp6uj7b8" path="res://art/main menu compressed/image00012r.png" id="9_mnkpm"]
 [ext_resource type="Script" path="res://menush.gd" id="10_sek8f"]
 [ext_resource type="Script" path="res://bmbuttons.gd" id="11_8y53k"]
 [ext_resource type="AudioStream" uid="uid://cswleun1oe0b5" path="res://audio/sfx/mixkit-modern-technology-select-3124_Audio Trimmer.wav" id="12_7nmkm"]
 [ext_resource type="AudioStream" uid="uid://bvrogmtr5vxae" path="res://audio/sfx/interface-1-126517.mp3" id="13_hdb3e"]
 [ext_resource type="Script" path="res://sigm1.gd" id="13_ugsu3"]
+[ext_resource type="Texture2D" uid="uid://c201nvo2lomi8" path="res://art/main menu compressed/image00014r.png" id="14_1n0ke"]
+[ext_resource type="Texture2D" uid="uid://ciccufic6gbb7" path="res://art/main menu compressed/image00013r.png" id="15_mndg4"]
 [ext_resource type="Script" path="res://sigm2.gd" id="15_qehck"]
+[ext_resource type="Texture2D" uid="uid://bshdm73pe1fim" path="res://art/main menu compressed/image00008r.png" id="17_f0ljt"]
 
 [sub_resource type="Animation" id="Animation_gaov2"]
 resource_name = "mmbutton"
@@ -70,9 +70,25 @@ tracks/0/keys = {
 "values": [Vector2(0.598, 0.598), Vector2(0.645, 0.645), Vector2(0.598, 0.598)]
 }
 
+[sub_resource type="Animation" id="Animation_vpc6e"]
+resource_name = "sigmbutton2"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("sigm2:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.02, 0.1),
+"transitions": PackedFloat32Array(1, 0.183011, 1),
+"update": 0,
+"values": [Vector2(0.598, 0.598), Vector2(0.645, 0.645), Vector2(0.598, 0.598)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_hc4st"]
 _data = {
-"sigmbutton1": SubResource("Animation_b7gcq")
+"sigmbutton1": SubResource("Animation_b7gcq"),
+"sigmbutton2": SubResource("Animation_vpc6e")
 }
 
 [node name="SKmainmenu" type="Control"]
@@ -92,25 +108,25 @@ texture = ExtResource("1_ah80w")
 [node name="menusi" type="Sprite2D" parent="."]
 position = Vector2(856.5, 344.5)
 scale = Vector2(0.634, 0.634)
-texture = ExtResource("2_6lle7")
+texture = ExtResource("3_y1gsq")
 script = ExtResource("4_ee5jw")
 
 [node name="menumu" type="Sprite2D" parent="."]
 position = Vector2(1062.5, 546)
 scale = Vector2(0.634, 0.634)
-texture = ExtResource("3_jfj7x")
+texture = ExtResource("5_njcnr")
 script = ExtResource("6_fupin")
 
 [node name="menuse" type="Sprite2D" parent="."]
 position = Vector2(856, 748)
 scale = Vector2(0.634, 0.634)
-texture = ExtResource("4_ieucn")
+texture = ExtResource("7_uj3eq")
 script = ExtResource("8_h630v")
 
 [node name="menush" type="Sprite2D" parent="."]
 position = Vector2(1064.5, 947.5)
 scale = Vector2(0.633, 0.633)
-texture = ExtResource("5_8sbsu")
+texture = ExtResource("9_mnkpm")
 script = ExtResource("10_sek8f")
 
 [node name="bmbuttons" type="Panel" parent="."]
@@ -161,18 +177,18 @@ bus = &"sfx"
 [node name="sigm" type="Sprite2D" parent="."]
 position = Vector2(960, 540)
 scale = Vector2(0.594, 0.594)
-texture = ExtResource("6_hdvf7")
+texture = ExtResource("14_1n0ke")
 
 [node name="sigm1" type="Sprite2D" parent="."]
 position = Vector2(539, 490)
 scale = Vector2(0.598, 0.598)
-texture = ExtResource("7_e3c6w")
+texture = ExtResource("15_mndg4")
 script = ExtResource("13_ugsu3")
 
 [node name="sigm2" type="Sprite2D" parent="."]
 position = Vector2(1392, 494)
 scale = Vector2(0.598, 0.598)
-texture = ExtResource("8_no115")
+texture = ExtResource("17_f0ljt")
 script = ExtResource("15_qehck")
 
 [node name="sigmbuttons" type="Panel" parent="."]
@@ -241,6 +257,7 @@ libraries = {
 [connection signal="mouse_entered" from="sigmbuttons/sigm2button" to="bmbuttons" method="_on_sigm_2_button_mouse_entered"]
 [connection signal="mouse_entered" from="sigmbuttons/sigm2button" to="sigm2" method="_on_sigm_2_button_mouse_entered"]
 [connection signal="mouse_exited" from="sigmbuttons/sigm2button" to="sigm2" method="_on_sigm_2_button_mouse_exited"]
+[connection signal="pressed" from="sigmbuttons/sigm2button" to="." method="_on_sigm_2_button_pressed"]
 [connection signal="pressed" from="sigmbuttons/sigm2button" to="bmbuttons" method="_on_sigm_2_button_pressed"]
 [connection signal="pressed" from="sigmbuttons/siback" to="." method="_on_siback_pressed"]
 [connection signal="pressed" from="sigmbuttons/siback" to="bmbuttons" method="_on_siback_pressed"]

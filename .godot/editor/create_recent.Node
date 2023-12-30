@@ -1,6 +1,12 @@
+Timer
+AnimationTree
+AnimatedSprite2D
+Bone2D
 AnimationPlayer
+Sprite2D
+CollisionShape2D
+Skeleton2D
+CharacterBody2D
 Panel
 Button
-AnimatedSprite2D
 AudioStreamPlayer
-Sprite2D

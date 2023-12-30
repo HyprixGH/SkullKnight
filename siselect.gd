@@ -1,8 +1,9 @@
 extends Control
 
-var selectedc = 1
+var selectedc = Global.selectedc
 # Called when the node enters the scene tree for the first time.
-var flash : AnimationPlayer
+
+
 
 
 func _process(delta):
@@ -27,30 +28,30 @@ func _process(delta):
 func _ready():
 	$rdycshl.visible = false
 	
-	flash = $flash
-
+	
 func _on_rdybutton_pressed():
 	
 	$ready.play("ready")
 	
+	get_tree().change_scene_to_file("res://.tscn")
+	
 func _on_siback_pressed():
+	await get_tree().create_timer(0.01).timeout
 	get_tree().change_scene_to_file("res://SKmainmenu.tscn")
 
 
 func _on_csup_pressed():
 	selectedc += 1
-	
-	if flash.is_playing():
-		flash.stop()
-	flash.play("flash")
+	update_selected_character()
 
 
 func _on_csdown_pressed():
 	selectedc -= 1
+	update_selected_character()
 	
-	
-	if flash.is_playing():
-		flash.stop()
-	flash.play("flash")
 
-
+func update_selected_character():
+	if selectedc > 4:
+		selectedc -= 4
+	if selectedc < 1:
+		selectedc = 4

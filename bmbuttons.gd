@@ -8,6 +8,9 @@ var buttonhl : AudioStreamPlayer
 
 var buttonpress : AudioStreamPlayer
 
+func playbuttonhlsound():
+	buttonhl.play()
+
 func _ready():
 	buttonhl = $buttonhl
 	
@@ -20,23 +23,23 @@ func _ready():
 	
 
 func _on_sibutton_mouse_entered():
-	buttonhl.play()
+	playbuttonhlsound()
 
 func _on_mubutton_mouse_entered():
-	buttonhl.play()
+	playbuttonhlsound()
 
 func _on_sebutton_mouse_entered():
-	buttonhl.play()
+	playbuttonhlsound()
 	
 func _on_shbutton_mouse_entered():
-	buttonhl.play()
+	playbuttonhlsound()
 	
 	
 func _on_sigm_1_button_mouse_entered():
-	buttonhl.play()
+	playbuttonhlsound()
 	
 func _on_sigm_2_button_mouse_entered():
-	buttonhl.play()
+	playbuttonhlsound()
 
 
 func play_audio():
@@ -78,4 +81,4 @@ func _on_sigm_2_button_pressed():
 
 
 func _on_siback_pressed():
-	buttonhl.play()
+	playbuttonhlsound()

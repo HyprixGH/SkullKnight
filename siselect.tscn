@@ -1,18 +1,17 @@
-[gd_scene load_steps=23 format=3 uid="uid://dpgo63p6wlvo3"]
+[gd_scene load_steps=20 format=3 uid="uid://dpgo63p6wlvo3"]
 
 [ext_resource type="Script" path="res://siselect.gd" id="1_8hwwm"]
-[ext_resource type="Texture2D" uid="uid://ceipw5yf74vm1" path="res://main menu compressed/image00008p.png" id="1_ftnse"]
-[ext_resource type="Texture2D" uid="uid://bob7ylkxfvr2c" path="res://main menu compressed/image00010p.png" id="1_rm5oi"]
-[ext_resource type="Texture2D" uid="uid://rbrrl0qg1iwo" path="res://main menu compressed/image00007p.png" id="2_jt7t8"]
-[ext_resource type="Texture2D" uid="uid://bncjefiv47un2" path="res://main menu compressed/image00002p.png" id="3_l5ap3"]
-[ext_resource type="Texture2D" uid="uid://bhc3y1gqrj2id" path="res://main menu compressed/image00001p.png" id="4_4xoq7"]
-[ext_resource type="Texture2D" uid="uid://d1qm0pxamnh2s" path="res://main menu compressed/image00006p.png" id="5_s1im7"]
-[ext_resource type="Texture2D" uid="uid://bb03hn31jac0a" path="res://main menu compressed/image00009p.png" id="6_y8p6q"]
-[ext_resource type="Texture2D" uid="uid://c5jyv3ab4r8cg" path="res://main menu compressed/image00004p.png" id="7_8pelr"]
-[ext_resource type="Texture2D" uid="uid://be016xvyxc1rx" path="res://main menu compressed/image00011p.png" id="8_h82qd"]
-[ext_resource type="Texture2D" uid="uid://bsa3mxuybcs7d" path="res://main menu compressed/842ad68b315b0f586c30b465221da609.jpg" id="10_1kk4k"]
-[ext_resource type="Texture2D" uid="uid://c3uxbqp1tujiy" path="res://main menu compressed/image00003p.png" id="10_v08o1"]
-[ext_resource type="Texture2D" uid="uid://ctm641mvm7sxf" path="res://main menu compressed/image00005p.png" id="11_dueee"]
+[ext_resource type="Texture2D" uid="uid://bob7ylkxfvr2c" path="res://art/main menu compressed/image00010p.png" id="2_bfqmd"]
+[ext_resource type="Texture2D" uid="uid://rbrrl0qg1iwo" path="res://art/main menu compressed/image00007p.png" id="3_gmmkp"]
+[ext_resource type="Texture2D" uid="uid://bncjefiv47un2" path="res://art/main menu compressed/image00002p.png" id="4_48qrm"]
+[ext_resource type="Texture2D" uid="uid://bhc3y1gqrj2id" path="res://art/main menu compressed/image00001p.png" id="5_fowtw"]
+[ext_resource type="Texture2D" uid="uid://d1qm0pxamnh2s" path="res://art/main menu compressed/image00006p.png" id="6_d0mgw"]
+[ext_resource type="Texture2D" uid="uid://bb03hn31jac0a" path="res://art/main menu compressed/image00009p.png" id="7_1pfr6"]
+[ext_resource type="Texture2D" uid="uid://c5jyv3ab4r8cg" path="res://art/main menu compressed/image00004p.png" id="8_g0fmj"]
+[ext_resource type="Texture2D" uid="uid://be016xvyxc1rx" path="res://art/main menu compressed/image00011p.png" id="9_s832n"]
+[ext_resource type="Texture2D" uid="uid://ceipw5yf74vm1" path="res://art/main menu compressed/image00008p.png" id="10_8qs5d"]
+[ext_resource type="Texture2D" uid="uid://c3uxbqp1tujiy" path="res://art/main menu compressed/image00003p.png" id="11_o35os"]
+[ext_resource type="Texture2D" uid="uid://ctm641mvm7sxf" path="res://art/main menu compressed/image00005p.png" id="12_7alj6"]
 [ext_resource type="Script" path="res://rdycshl.gd" id="13_fcg65"]
 [ext_resource type="Script" path="res://csbuttons.gd" id="14_e1lb0"]
 [ext_resource type="AudioStream" uid="uid://cswleun1oe0b5" path="res://audio/sfx/mixkit-modern-technology-select-3124_Audio Trimmer.wav" id="15_4oel2"]
@@ -22,10 +21,10 @@
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_rm5oi")
+"texture": ExtResource("2_bfqmd")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_jt7t8")
+"texture": ExtResource("3_gmmkp")
 }],
 "loop": true,
 "name": &"blueskullyp",
@@ -33,10 +32,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_l5ap3")
+"texture": ExtResource("4_48qrm")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_4xoq7")
+"texture": ExtResource("5_fowtw")
 }],
 "loop": true,
 "name": &"greenskullyp",
@@ -44,10 +43,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_s1im7")
+"texture": ExtResource("6_d0mgw")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_y8p6q")
+"texture": ExtResource("7_1pfr6")
 }],
 "loop": true,
 "name": &"orangeskullyp",
@@ -55,10 +54,10 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("7_8pelr")
+"texture": ExtResource("8_g0fmj")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_h82qd")
+"texture": ExtResource("9_s832n")
 }],
 "loop": true,
 "name": &"redskullyp",
@@ -85,26 +84,6 @@ _data = {
 "ready": SubResource("Animation_urw58")
 }
 
-[sub_resource type="Animation" id="Animation_wgi8r"]
-resource_name = "flash"
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:modulate")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.05),
-"transitions": PackedFloat32Array(1, 0.183011),
-"update": 0,
-"values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
-}
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_armpq"]
-_data = {
-"flash": SubResource("Animation_wgi8r")
-}
-
 [node name="siselect" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -114,24 +93,17 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_8hwwm")
 
-[node name="white" type="Sprite2D" parent="."]
-modulate = Color(1, 1, 1, 0)
-position = Vector2(271, 464)
-scale = Vector2(0.45, 0.45)
-texture = ExtResource("10_1kk4k")
-
 [node name="characterp" type="AnimatedSprite2D" parent="."]
-show_behind_parent = true
-top_level = true
 position = Vector2(269, 421)
 scale = Vector2(0.594, 0.594)
 sprite_frames = SubResource("SpriteFrames_3i2uk")
 animation = &"orangeskullyp"
 
 [node name="characterselect" type="Sprite2D" parent="."]
+top_level = true
 position = Vector2(960, 540)
 scale = Vector2(0.594, 0.594)
-texture = ExtResource("1_ftnse")
+texture = ExtResource("10_8qs5d")
 
 [node name="csup" type="Button" parent="."]
 show_behind_parent = true
@@ -150,25 +122,21 @@ offset_right = 358.0
 offset_bottom = 770.0
 
 [node name="rdycs" type="Sprite2D" parent="."]
+top_level = true
 position = Vector2(960, 540)
 scale = Vector2(0.594, 0.594)
-texture = ExtResource("10_v08o1")
+texture = ExtResource("11_o35os")
 
 [node name="rdycshl" type="Sprite2D" parent="."]
+top_level = true
 position = Vector2(1523, 540)
 scale = Vector2(0.594, 0.594)
-texture = ExtResource("11_dueee")
+texture = ExtResource("12_7alj6")
 script = ExtResource("13_fcg65")
 
 [node name="ready" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_rk4sh")
-}
-
-[node name="flash" type="AnimationPlayer" parent="."]
-root_node = NodePath("../white")
-libraries = {
-"": SubResource("AnimationLibrary_armpq")
 }
 
 [node name="rdybutton" type="Button" parent="."]
